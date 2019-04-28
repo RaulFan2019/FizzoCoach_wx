@@ -1,0 +1,31 @@
+<!--traineeProfileEdit.wxml-->
+<view class="container">
+  <view class="card">
+      <view class="weui-cells weui-cells_after-title">
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=身高&key=height&value={{trainee.height}}&unit=cm" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">身高</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.height}}cm</view>
+          </navigator>
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=体重&key=weight&value={{trainee.weight}}&unit=kg" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">体重</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.weight}}kg</view>
+          </navigator>
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=静息心率&key=rest_hr&value={{trainee.rest_hr}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">静息心率</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.rest_hr}}</view>
+          </navigator>
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=最大心率&key=max_hr&value={{trainee.max_hr}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">最大心率</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.max_hr}}</view>
+          </navigator>
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=靶心率上限&key=target_hr_high&value={{trainee.target_hr_high}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">靶心率上限</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.target_hr_high}}</view>
+          </navigator>
+          <navigator url="../changeTrainee/changeTrainee?storeid={{storeid}}&moverid={{trainee.id}}&typename=靶心率下限&key=target_hr&value={{trainee.target_hr}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">靶心率下限</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{trainee.target_hr}}</view>
+          </navigator>
+      </view>
+  </view>
+</view>

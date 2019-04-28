@@ -1,0 +1,14 @@
+<!--changeTrainee.wxml-->
+<view class="container">
+  <view class="card mt40">
+     <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                  <input class="weui-input" maxlength="{{maxlength}}" type="{{inputtype}}" placeholder="请输入{{typename}}" value="{{value}}" focus bindinput="bindKeyInput"/>
+                  <text class="unit">{{unit}}</text>
+              </view>
+          </view>
+      </view>
+  </view>
+  <button class="weui-btn btn" type="primary" bindtap="saveChanges">保存</button>
+</view>

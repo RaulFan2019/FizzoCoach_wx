@@ -1,0 +1,49 @@
+<!--trainee.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title" wx:if="{{ trainee.length > 0}}">
+      <navigator url="../traineeDetail/traineeDetail?moverid={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{trainee}}" wx:key="id">
+        <view class="weui-cell__hd">
+          <image src="{{item.avatar || userDefault.avatar}}" class="trainee__avatar" background-size="cover" id="{{index}}"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="trainee">
+            <text class="trainee__name">{{item.nickname || userDefault.nickname}}</text>
+            <text class="trainee__phone">{{item.mobile}}</text>
+          </view>
+        </view>
+        <view class="weui-cell__ft">{{item.jointime}}加入</view>
+      </navigator>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">
+        <text wx:if="{{ searching }}">无结果</text>
+        <text wx:else>您还未添加学员</text>
+      </view>
+    </view>
+    <view class="card__footer" wx:if="{{ !searching }}">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" wx:if="{{ more && oldtrainee.length > size}}">
+        <view class="weui-cell__bd">查看更多</view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+/* traineeProfileEdit.wxss */
+.weui-cell__ft{
+  color: #888;
+  font-size: 30rpx;
+}
+
+.weui-cell__bd{
+  font-size: 30rpx;
+}
+
+.weui-cell__ft_in-access {
+  padding-right: 30rpx;
+}

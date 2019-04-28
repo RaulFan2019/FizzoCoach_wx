@@ -1,0 +1,9 @@
+/* pages/msgSuccess/msgSuccess.wxss */
+page{
+    background-color: #efeff4;
+}
+
+button[type="warn"] {
+  color:#FFFFFF;
+  background-color:#FF4612;
+}

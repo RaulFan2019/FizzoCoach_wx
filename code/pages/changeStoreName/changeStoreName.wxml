@@ -1,0 +1,13 @@
+<!--changeStoreName.wxml-->
+<view class="container">
+  <view class="card mt40">
+     <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                  <input class="weui-input" placeholder="请输入门店名称" value="{{store.name}}" focus bindinput="bindKeyInput"/>
+              </view>
+          </view>
+      </view>
+  </view>
+  <button class="weui-btn btn" type="primary" bindtap="changeStoreName">保存</button>
+</view>

@@ -1,0 +1,163 @@
+/* traineeDetail.wxss */
+
+.header {
+  display: block;
+  width: 100%;
+  height: 300rpx;
+  background-image: linear-gradient(-180deg, #2b2a30 0%, #3f3e43 100%);
+}
+
+.header .avatar {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 38rpx auto;
+}
+
+.header .name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: -30rpx;
+}
+
+.header .btn-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.fitness__index {
+  text-align: center;
+  color: #ff4612;
+  margin: 38rpx 0;
+  height: 90rpx;
+}
+
+.fitness__index:nth-child(2) {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.fitness__num {
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 48rpx;
+  font-family: "Font123go";
+}
+
+.fitness__uint {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+}
+
+.mini-btn {
+  background-color: #ff4612 !important;
+  border-radius: 32rpx;
+  font-size: 24rpx !important;
+  color: #fff;
+}
+
+.weui-cell__bd, .weui-cell__ft, .weui-panel__hd {
+  color: #2c2c30;
+  font-size: 26rpx;
+}
+
+.tit {
+  font-size: 32rpx;
+}
+
+.sub-tit {
+  font-size: 32rpx;
+  position: absolute;
+  right: 30rpx;
+  padding-right: 30rpx;
+}
+
+.sub-tit::after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 2px;
+}
+
+.exercise-type {
+  width: 54rpx;
+  height: 54rpx;
+  margin: 45rpx 20rpx 45rpx 0;
+  vertical-align: top;
+}
+
+.exercise-type__name {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #2c2c30;
+  font-size: 28rpx;
+}
+
+.exercise-type__time {
+  display: block;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #000;
+  font-size: 20rpx;
+}
+
+.weui-cell {
+  height: 146rpx !important;
+  line-height: 146rpx !important;
+  padding: 0 30rpx;
+}
+
+.binding {
+  height: 110rpx !important;
+  line-height: 110rpx !important;
+  padding: 0 30rpx;
+}
+
+.check-record {
+  display: inline-block;
+  width: 240rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: right;
+}
+
+.card__footer .weui-cell {
+  height: 80rpx !important;
+  line-height: 80rpx !important;
+}
+
+.card__footer .weui-cell .weui-cell__bd {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.unbinding-btn{
+  width: 180rpx!important;
+  height: 54rpx!important;
+  font-size: 24rpx!important;
+  color: #FC4825!important;
+  border: 1rpx solid #FC4825!important;
+  border-radius: 27rpx!important;
+  margin-top: 35rpx!important
+}

@@ -1,0 +1,4 @@
+/* changeHubHrMode.wxss */
+.weui-icon-radio{
+  color: #FF4612!important;
+}

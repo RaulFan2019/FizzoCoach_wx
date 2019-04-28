@@ -1,0 +1,27 @@
+<!--myHub.wxml-->
+<view class="container">
+  <view class="card mt40">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../myHubDetail/myHubDetail?hubid={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{hub}}" wx:key="id">
+        <view class="weui-cell__hd">
+          <image src="{{icon.hubIcon}}" class="hub__icon"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="hub">
+            <text class="hub__name">{{item.name}}</text>
+            <text class="hub__mode">{{item.hrmode}}</text>
+          </view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{item.registertime}}添加</view>
+      </navigator>
+    </view>
+    <view class="card__footer">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" wx:if="{{ more && oldhub.length > size}}">
+        <view class="weui-cell__bd">查看更多</view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+    </view>
+  </view>
+</view>

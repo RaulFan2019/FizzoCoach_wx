@@ -1,0 +1,19 @@
+/* store.wxss */
+.store{
+    height: 160rpx;
+    line-height: 160rpx;
+    margin: 40rpx 0;
+    font-size: 34rpx;
+}
+
+.store .weui-cell__ft, .store-info .weui-cell__ft{
+    color: #888;
+    font-size: 34rpx;
+}
+
+.store .store__logo{
+    width: 120rpx;
+    height: 120rpx;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+}

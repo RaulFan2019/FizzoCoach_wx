@@ -1,0 +1,48 @@
+<!--myHrDeviceDetail.wxml-->
+<view class="container">
+  <view class="card header">
+      <view wx:if="{{device.binded}}" class="binded">
+        <view class="binded-device">
+          <image class="banding-device__icon" src="{{icon.ringIcon}}" background-size="cover"></image>
+          <text>{{device.name}}</text>
+        </view>
+        <view class="dashed-line"></view>
+        <view class="btn-wrapper">
+          <button class="weui-btn mini-btn" type="warn" size="mini" bindtap="clearBinding">解除绑定</button>
+        </view>
+        <view class="binded-trainee">
+          <image class="binded-trainee-avatar" src="{{device.binduser.avatar || icon.default}}" background-size="cover"></image>
+          <text>{{device.binduser.nickname}}</text>
+        </view>
+      </view>
+      <view wx:else>
+        <image class="icon-ring" src="{{icon.ring}}" background-size="cover"></image>
+        <view class="btn-wrapper">
+          <button class="weui-btn mini-btn" type="warn" size="mini" bindtap="bindingToTrainee">绑定学员</button>
+        </view>
+      </view>
+  </view>
+  <view class="card">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">名称</view>
+            <view class="weui-cell__ft">{{device.name}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">S/N码</view>
+            <view class="weui-cell__ft">{{device.serialno}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">添加时间</view>
+            <view class="weui-cell__ft">{{device.setuptime}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd delete" bindtap="deleteDevice">删除设备</view>
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+<!--courseDetail.wxml-->
+<view class="container">
+  <view class="card mt20">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../changeCourseName/changeCourseName?id={{groupTraining.id}}&name={{groupTraining.name}}" class="weui-cell weui-cell_access training-name" hover-class="weui-cell_active">
+        <view class="weui-cell__bd gname">{{groupTraining.name}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">修改名称</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="card">
+    <view class="fitness">
+      <view class="fitness__index">
+        <text class="fitness__num">{{groupTraining.movercount}}</text>
+        <text class="fitness__uint">人数</text>
+      </view>
+      <view class="fitness__index">
+        <text class="fitness__num">{{groupTraining.calorie}}</text>
+        <text class="fitness__uint">千卡</text>
+      </view>
+      <view class="fitness__index">
+        <text class="fitness__num">{{groupTraining.effort_point}}</text>
+        <text class="fitness__uint">点数</text>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card__title">
+      <text class="txt">学员锻炼明细</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="weui-cell__ft weui-cell__ft_in-access arrow-down">{{ array[index] }}</view>
+      </picker>
+    </view>
+    <view wx:if="{{groupTraining.ranking.length > 0}}">
+      <view class="card__content" style="padding-right:0;">
+        <navigator url="../trainingDetail/trainingDetail?workoutid={{item.id}}&time={{item.starttime}}-{{item.finishtime}}" class="trainee-ranking" hover-class="weui-cell_active" wx:for="{{groupTraining.ranking}}" wx:key="id" id="effortPoint" wx:if="{{activeIndex == 0}}">
+          <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+          <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+          <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+          <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+          <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+          <view class="trainee-ranking__info">
+            <text class="trainee-ranking__name">{{item.nickname}}</text>
+            <text class="trainee-ranking__time">{{item.starttime}}-{{item.finishtime}}</text>
+          </view>
+          <text class="trainee-ranking__num">{{item.effort_point}}</text>
+        </navigator>
+        <navigator url="../trainingDetail/trainingDetail?workoutid={{item.id}}&time={{item.starttime}}-{{item.finishtime}}" class="trainee-ranking" hover-class="weui-cell_active" wx:for="{{groupTraining.ranking}}" wx:key="id" id="calorie" wx:if="{{activeIndex == 1}}">
+          <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+          <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+          <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+          <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+          <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+          <view class="trainee-ranking__info">
+            <text class="trainee-ranking__name">{{item.nickname}}</text>
+            <text class="trainee-ranking__time">{{item.starttime}}-{{item.finishtime}}</text>
+          </view>
+          <text class="trainee-ranking__num">{{item.calorie}}</text>
+        </navigator>
+        <navigator url="../trainingDetail/trainingDetail?workoutid={{item.id}}&time={{item.starttime}}-{{item.finishtime}}" class="trainee-ranking" hover-class="weui-cell_active" wx:for="{{groupTraining.ranking}}" wx:key="id" id="avgEffort" wx:if="{{activeIndex == 2}}">
+          <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+          <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+          <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+          <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+          <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+          <view class="trainee-ranking__info">
+            <text class="trainee-ranking__name">{{item.nickname}}</text>
+            <text class="trainee-ranking__time">{{item.starttime}}-{{item.finishtime}}</text>
+          </view>
+          <text class="trainee-ranking__num">{{item.avg_effort}}%</text>
+        </navigator>
+        <navigator url="../trainingDetail/trainingDetail?workoutid={{item.id}}&time={{item.starttime}}-{{item.finishtime}}" class="trainee-ranking" hover-class="weui-cell_active" wx:for="{{groupTraining.ranking}}" wx:key="id" id="minutes" wx:if="{{activeIndex == 3}}">
+          <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+          <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+          <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+          <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+          <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+          <view class="trainee-ranking__info">
+            <text class="trainee-ranking__name">{{item.nickname}}</text>
+            <text class="trainee-ranking__time">{{item.starttime}}-{{item.finishtime}}</text>
+          </view>
+          <text class="trainee-ranking__num">{{item.minutes}}分钟</text>
+        </navigator>
+      </view>
+      <view class="card__footer weui-cells weui-cells_after-title" wx:if="{{ more && groupTraining.ranking.length > size}}">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore">
+          <view class="weui-cell__bd">查看更多</view>
+        </view>
+      </view>
+      <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">无记录</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<!--report.wxml-->
+<view class="container">
+  <view class="card">
+        <view class="selected_date">
+          <view style="text-align:right;" bindtap="preMonth">
+            <image class="select_icon" src="/assets/img/left.png"></image>
+          </view>
+          <view class="text_center">{{curYear+'年'+curMonth+'月'}}</view>
+          <view style="text-align:left;" bindtap="nextMonth">
+            <image class="select_icon" src="/assets/img/right.png"></image>
+          </view>
+        </view>
+        <view class="calendar_panel">
+            <view class="calendar_box">
+              <view class="weekday_label">周日</view>
+              <view class="weekday_label">周一</view>
+              <view class="weekday_label">周二</view>
+              <view class="weekday_label">周三</view>
+              <view class="weekday_label">周四</view>
+              <view class="weekday_label">周五</view>
+              <view class="weekday_label">周六</view>
+            </view>
+            <view class="calendar_box" wx:for="{{dateList}}" wx:for-item="week" wx:key="week">
+              <view class="weekday_label" wx:for="{{week}}" wx:key="date">
+                <text class="{{item.value==selectedDate?'active_date':''}}" bindtap="selectDate" data-date="{{item}}" style="{{item.has?styleObj:''}}">{{item.date}}</text>
+              </view>
+            </view>
+        </view>
+    </view>
+    <view class="card">
+      <view class="weui-cells weui-cells_after-title" wx:if="{{selectedDayTraining[0].grouptrainings.length > 0}}">
+        <navigator url="../courseDetail/courseDetail?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{selectedDayTraining[0].grouptrainings}}" wx:key="id">
+            <view class="weui-cell__bd">
+              <text class="exercise-type__name">{{item.name}}</text>
+              <text class="exercise-type__time">{{item.starttime}}-{{item.finishtime}}</text>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{item.duration}}</view>
+        </navigator>
+      </view>
+      <view class="weui-loadmore weui-loadmore_line" wx:else>
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">当日无记录</view>
+      </view>
+    </view>
+</view>
+

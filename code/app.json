@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/today/today",
+    "pages/report/report",
+    "pages/trainee/trainee",
+    "pages/store/store",
+    "pages/traineeProfileEdit/traineeProfileEdit",
+    "pages/todayRanking/todayRanking",
+    "pages/myHub/myHub",
+    "pages/myHrDevice/myHrDevice",
+    "pages/trainingDetail/trainingDetail",
+    "pages/traineeRecord/traineeRecord",
+    "pages/courseDetail/courseDetail",
+    "pages/myHrDeviceDetail/myHrDeviceDetail",
+    "pages/deviceBinding/deviceBinding",
+    "pages/myHubDetail/myHubDetail",
+    "pages/traineeDetail/traineeDetail",
+    "pages/noAuth/noAuth",
+    "pages/deviceSearching/deviceSearching",
+    "pages/deviceAdding/deviceAdding",
+    "pages/changeStoreName/changeStoreName",
+    "pages/changeHubName/changeHubName",
+    "pages/changeHubHrMode/changeHubHrMode",
+    "pages/changeTrainee/changeTrainee",
+    "pages/msgFail/msgFail",
+    "pages/msgSuccess/msgSuccess",
+    "pages/changeCourseName/changeCourseName",
+    "pages/selectHrDevice/selectHrDevice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b2a30",
+    "navigationBarTitleText": "FIZZO教练",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#EFEFF4",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#FF4612",
+    "backgroundColor": "#FFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/today/today",
+        "text": "今日动态",
+        "iconPath": "assets/img/today.png",
+        "selectedIconPath": "assets/img/today__on.png"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "text": "团课报告",
+        "iconPath": "assets/img/report.png",
+        "selectedIconPath": "assets/img/report__on.png"
+      },
+      {
+        "pagePath": "pages/trainee/trainee",
+        "text": "学员管理",
+        "iconPath": "assets/img/trainee.png",
+        "selectedIconPath": "assets/img/trainee__on.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "门店管理",
+        "iconPath": "assets/img/store.png",
+        "selectedIconPath": "assets/img/store__on.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

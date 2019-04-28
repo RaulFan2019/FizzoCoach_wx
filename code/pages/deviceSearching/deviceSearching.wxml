@@ -1,0 +1,49 @@
+<!--deviceSearching.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" auto-focus/>
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="tip-bg" wx:if="{{tipShowed}}">
+      <view class="tip-txt tip-txt-1">搜索支持手环名称和S/N编号</view>
+      <image src="{{icon.searchingIcon}}" class="searching__icon" background-size="cover"></image>
+      <view class="tip-txt tip-txt-2">
+        <text class="d-bl">编号在设备的背面</text> 
+        <text class="d-bl">请输入S/N后4位字符</text> 
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title" wx:else>
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{hrdevices}}" wx:key="*this" bindtap="checkDeviceDetail" id="{{index}}">
+            <view class="weui-cell__bd">
+              <view class="banding">
+                  <view class="banding__device">
+                    <image src="{{icon.ringIcon}}" class="banding-device__icon" background-size="cover"></image>
+                    <text class="banding-device__name">{{item.name}}</text>
+                  </view>
+              </view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{item.serialno}}</view>
+        </view>
+      </view>
+  
+  
+  
+  
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{hrdevices.length == 0}}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有找到该设备</view>
+    </view>
+    </view>
+</view>

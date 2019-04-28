@@ -1,0 +1,135 @@
+/* courseDetail.wxss */
+.gname{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fitness{
+  display: flex;
+  margin-top: 35rpx;
+  margin-bottom: 35rpx;
+}
+
+.fitness__index{
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  height: 90rpx;
+}
+
+.fitness .fitness__index:nth-child(2){
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+}
+
+.fitness__index .fitness__num{
+    display: block;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #FF4612;
+    font-size: 48rpx;
+    font-family: "Font123go";
+}
+
+.fitness__uint {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #222;
+}
+
+.trainee-ranking{
+  height: 146rpx;
+  line-height: 146rpx;
+  margin: 0 0 0 88rpx;
+  border-bottom: 1px solid #E5E5E5;
+  clear:both;
+  padding: 0 32rpx 0 0;
+  position: relative;
+}
+
+.trainee-ranking:last-child{
+  border-bottom: 0;
+}
+
+.trainee-ranking__info{
+  display: inline-block;
+  height: 85rpx;
+  margin: 33rpx 0;
+  float: left;
+}
+
+.trainee-ranking__avatar{
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 33rpx 7rpx 33rpx 0;
+  float: left;
+}
+
+.trainee-ranking__name{
+  display: block;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #222;
+  font-size: 34rpx;
+}
+
+.trainee-ranking__time{
+  display: block;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #c7c7cc;
+  font-size: 26rpx;
+}
+
+.trainee-ranking__num{
+  color: #222;
+  font-size: 28rpx;
+  float: right;
+}
+
+.trainee-ranking__medal {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 33rpx;
+  left: -90rpx;
+}
+
+.ranking{
+    color: #343339;
+    font-size: 36rpx;
+    font-family: "Font123go";
+    position: absolute;
+    left: -60rpx;
+}
+
+.card__title {
+  padding: 0 30rpx;
+
+}
+
+.card__title .txt{
+  float: left;
+}
+
+picker{
+  display: inline-block;
+  float: right;
+  color: #888;
+}
+
+.arrow-down::after{
+  -webkit-transform: matrix(-0.707107,0.707107,-0.707107,-0.707107,0,0);
+  transform: matrix(-0.707107,0.707107,-0.707107,-0.707107,0,0);
+}
+
+.training-name{
+  height: 110rpx;
+  line-height: 110rpx;
+  padding-top: 0;
+  padding-bottom: 0; 
+}

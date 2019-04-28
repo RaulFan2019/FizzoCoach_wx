@@ -1,0 +1,57 @@
+<!--selectHrDevice.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title" wx:if="{{hrdevices.length > 0}}">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{hrdevices}}" wx:key="id" bindtap="bindToTrainee" id="{{item.id}}" data-devicename="{{item.name}}">
+        <view class="weui-cell__bd">
+          <view class="banding weui-flex">
+            <view class="banding__device weui-flex__item">
+              <image src="{{icon.ringIcon}}" class="banding-device__icon" background-size="cover"></image>
+              <text class="banding-device__name">{{item.name}}</text>
+            </view>
+            <view class="banding__time weui-flex__item">
+              <text wx:if="{{item.binded}}">{{item.binduser.bindingtime}}绑定</text>
+              <text wx:else></text>
+            </view>
+            <view class="banding__trainee weui-flex__item">
+              <view wx:if="{{item.binded}}">
+                <image src="{{item.binduser.avatar || icon.default}}" class="banding-trainee__avatar" background-size="cover"></image>
+                <text class="banding-trainee__name">{{item.binduser.nickname}}</text>
+              </view>
+              <view wx:else>
+                <text class="nobanding-tip">尚未绑定</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">无结果</view>
+    </view>
+    <view class="card__footer">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" wx:if="{{ more && oldhrdevices.length > size && !searching}}">
+        <view class="weui-cell__bd">查看更多</view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more  && !searching}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+    </view>
+  </view>
+</view>

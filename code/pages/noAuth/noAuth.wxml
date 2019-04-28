@@ -1,0 +1,26 @@
+<!--noAuth.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="club__info">
+      <image class="club-info__avatar" src="{{club.logo}}" background-size="cover"  wx:if="{{club.logo}}"></image>
+      <text class="club-info__name">{{club.name}}</text>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">
+          <text>您没有管理权限</text>
+        </view>
+    </view>
+    <view class="foot-tip">
+      <text>FIZZO教练用于健身房的管理</text>
+      <text>请联系门店管理员获取权限</text>
+    </view>
+  </view>
+  <view class="card" wx:if="{{userInfo}}">
+    <view class="user-info">
+      <image class="user-info__avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+      <text class="user-info__name">{{userInfo.nickname}}</text>
+      <text class="user-info__phone">{{userInfo.mobile}}</text>
+    </view>
+  </view>
+</view>
+

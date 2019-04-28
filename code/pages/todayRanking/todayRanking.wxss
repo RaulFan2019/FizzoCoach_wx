@@ -1,0 +1,83 @@
+/* todayRanking.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+
+.page__bd{
+    padding-bottom: 0;
+}
+
+.trainee-ranking{
+  height: 146rpx;
+  line-height: 146rpx;
+  margin: 0 0 0 88rpx;
+  border-bottom: 1px solid #E5E5E5;
+  clear:both;
+  padding: 0 32rpx 0 0;
+  position: relative;
+}
+
+.trainee-ranking:last-child{
+  border-bottom: 0;
+}
+
+.trainee-ranking__info{
+  display: inline-block;
+  height: 85rpx;
+  margin: 33rpx 20rpx;
+  float: left;
+}
+
+.trainee-ranking__avatar{
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 33rpx 7rpx 33rpx 0;
+  float: left;
+}
+
+.trainee-ranking__name{
+  display: block;
+  height: 85rpx;
+  line-height: 85rpx;
+  color: #222;
+  font-size: 30rpx;
+}
+
+.trainee-ranking__time{
+  display: block;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #c7c7cc;
+  font-size: 26rpx;
+}
+
+.trainee-ranking__num{
+  color: #222;
+  font-size: 28rpx;
+  float: right;
+}
+
+.trainee-ranking__medal {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 33rpx;
+  left: -90rpx;
+}
+
+.ranking{
+    color: #343339;
+    font-size: 36rpx;
+    font-family: "Font123go";
+    position: absolute;
+    left: -60rpx;
+}
+
+.card__content{
+  border-bottom: 1px solid #E5E5E5;
+}

@@ -1,0 +1,97 @@
+/* report.wxss */
+.exercise-type__name{
+  display: block;
+  width:330rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #2C2C30;
+  font-size: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exercise-type__time{
+  display: block;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #999;
+  font-size: 26rpx;
+}
+
+.weui-cell__ft{
+  color: #999;
+  font-size: 26rpx;
+}
+
+.weui-cell_access {
+  height: 146rpx;
+  padding: 0 30rpx;
+}
+
+.selected_date {
+  padding: 0 30rpx;
+  overflow: hidden;
+  height: 56rpx;
+  line-height: 56rpx;
+  background-color: #FF4612;
+}
+
+.selected_date>view {
+  width: 33.3%;
+  float: left;
+  font-size: 30rpx;
+  color: #FFF;
+}
+
+.calendar_panel {
+  width: 100%;
+  /*height: 428rpx;*/
+}
+
+.calendar_box {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  /*border-bottom: 1rpx solid #ececec;*/
+}
+
+.weekday_label {
+  width: 14.28%;
+  float: left;
+  display: block;
+  text-align: center;
+  color: #888;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+}
+
+.weekday_label>text {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: inline-block;
+  color: #2C2C30;
+  font-size: 30rpx;
+}
+
+.select_icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-bottom: -4rpx;
+}
+
+.weekday_label>text.active_date {
+  background: #FF4612;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.show_box {
+  padding: 20rpx;
+  font-size: 26rpx;
+}
+
+.calendar_box:nth-child(2) .weekday_label{
+  float: right;
+}

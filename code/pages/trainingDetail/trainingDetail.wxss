@@ -1,0 +1,222 @@
+/* trainingDetail.wxss */
+
+.trainee {
+  height: 160rpx;
+  line-height: 160rpx;
+  margin: 40rpx 0;
+}
+
+.trainee .trainee__avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.trainee .tip {
+  color: #888;
+  font-size: 34rpx;
+  float: right;
+}
+
+.weui-cell__bd {
+  padding: 0 34rpx;
+  font-size: 34rpx;
+  color: #2c2c30;
+}
+
+#barChart {
+  display: block;
+  width: 580rpx;
+  height: 354rpx;
+  position: relative;
+  margin: 0 auto;
+}
+
+#pieChart {
+  display: block;
+  width: 356rpx;
+  height: 450rpx;
+  position: relative;
+}
+
+.weui-panel__hd {
+  padding: 0 30rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+}
+
+.tit {
+  font-size: 32rpx;
+  color: #2c2c30;
+}
+
+.sub-tit {
+  font-size: 26rpx;
+  color: #2c2c30;
+  float: right;
+}
+
+.weui-panel__hd::after {
+  left: 0;
+}
+
+table {
+  display: table;
+}
+
+/*默认为表格显示*/
+
+tr {
+  display: table-row;
+}
+
+/*默认为表格行显示*/
+
+thead {
+  display: table-header-group;
+}
+
+/*默认为表格头部分组显示*/
+
+tbody {
+  display: table-row-group;
+}
+
+/*默认为表格行分组显示*/
+
+tfoot {
+  display: table-footer-group;
+}
+
+/*默认为表格底部分组显示*/
+
+td, th {
+  display: table-cell;
+}
+
+/*默认为单元格显示*/
+
+th {
+  font-weight: bolder;
+  text-align: center;
+}
+
+/*默认为表格标题显示，呈现加粗居中状态*/
+
+table {
+  border-spacing: 2px;
+}
+
+thead, tbody, tfoot {
+  vertical-align: middle;
+}
+
+/*定义表头、主体表、表脚元素默认为垂直对齐*/
+
+td, th {
+  vertical-align: inherit;
+}
+
+/*定义单元格、列标题默认为垂直对齐默认为继承*/
+
+.tbl {
+  width: 394rpx;
+  font-size: 20rpx;
+  color: #2c2c30;
+  margin-top: 24rpx;
+}
+
+.tbl th {
+  text-align: left;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 22rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tbl td {
+  text-align: left;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.tbl tr td:first-child, .tbl tr th:first-child {
+  padding-left: 14rpx;
+}
+
+.c {
+  display: inline-block;
+  width: 16rpx;
+  height: 20rpx;
+  margin: 0 10rpx -2rpx 0;
+}
+
+.c1 {
+  background-color: #cfcfcf;
+}
+
+.c2 {
+  background-color: #00debf;
+}
+
+.c3 {
+  background-color: #98e961;
+}
+
+.c4 {
+  background-color: #f5ab00;
+}
+
+.c5 {
+  background-color: #f47002;
+}
+
+.c6 {
+  background-color: #f5452d;
+}
+
+.base-line {
+  border-top: 2rpx solid #e5e5e5;
+  width: 528rpx;
+  height: 40rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.base-line text {
+  display: inline-block;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 20rpx;
+  color: #2c2c30;
+  position: absolute;
+  top: -14rpx;
+}
+
+.base-line text:first-child {
+  left: -90rpx;
+}
+
+.base-line text:last-child {
+  right: -80rpx;
+}
+
+.heart-rate__sider {
+  width: 60rpx;
+  line-height: 42rpx;
+  font-size: 20rpx;
+  color: #2c2c30;
+  flex-direction: column;
+  position: absolute;
+  top: 20rpx;
+}
+
+.effort {
+  left: 30rpx;
+}
+
+.heart {
+  right: 30rpx;
+  text-align: right;
+}

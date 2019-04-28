@@ -1,0 +1,36 @@
+<!--deviceAdding.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input search">
+            <view class="weui-cell__bd">
+                <input type="text" class="weui-input" placeholder="请输入设备编号" placeholder-class="c999" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"/>
+            </view>
+            <button class="weui-btn mini-btn" type="warn" disabled="{{btndisabled}}" bindtap="confirmQuery">确定</button>
+        </view>
+    </view>
+    <view class="tip-bg" wx:if="{{tipShowed}}">
+      <view class="tip-txt tip-txt-2">
+        <text class="d-bl">编号在设备的背面</text> 
+        <text class="d-bl">请输入S/N后4位字符</text> 
+      </view>
+      <image src="{{icon.searchingIcon}}" class="searching__icon" background-size="cover"></image>
+    </view>
+    <view class="weui-cells weui-cells_after-title" wx:if="{{ !tipShowed}}">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{hrdevices}}" wx:key="*this" bindtap="addToMyDevice" id="{{item.id}}">
+            <view class="weui-cell__bd">
+              <view class="banding">
+                  <view class="banding__device">
+                    <image src="{{icon.ringIcon}}" class="banding-device__icon" background-size="cover"></image>
+                    <text class="banding-device__name">{{item.name}}</text>
+                  </view>
+              </view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{item.serialno}}</view>
+        </view>
+      </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{ noresult }}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有找到该设备</view>
+    </view>
+    </view>
+</view>

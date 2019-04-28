@@ -1,0 +1,157 @@
+/* today.wxss */
+.club__info{
+  width: 100%;
+  text-align: center;
+}
+
+.club-info__avatar{
+  width:132rpx;
+  height: 132rpx;
+  margin: 24rpx 0 12rpx 0;
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  background: #E5E5E5
+}
+
+.club-info__name{
+  display: block;
+  width: 100%;
+  height: 37rpx;
+  line-height: 37rpx;
+  margin-bottom: 37rpx;
+  color: #343339;
+  font-size: 26rpx;
+}
+
+.fitness{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.fitness__index{
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.fitness .fitness__index:nth-child(2){
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+}
+
+.fitness__index .fitness__num{
+    color: #FF4612;
+    font-size: 48rpx;
+    font-family: "Font123go";
+}
+
+.fitness__uint {
+  display: block;
+  margin: 10rpx 0;
+  color: #222222;
+}
+
+.trainee-ing{
+  width: 100%;
+  height: 220rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.trainee{
+  display: inline-block;
+  flex: 1;
+  margin: 24rpx 4rpx 0 4rpx;
+}
+
+.trainee-ing__avatar{
+  width:120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.trainee-ing__name{
+  display: block;
+  width: 120rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  margin: 12rpx auto 26rpx;
+  text-align: center;
+  color: #343339;
+  font-size: 26rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.trainee-ranking{
+  height: 146rpx;
+  line-height: 146rpx;
+  margin: 0 0 0 88rpx;
+  border-bottom: 1px solid #E5E5E5;
+  clear:both;
+  padding: 0 32rpx 0 0;
+  position: relative;
+}
+
+.trainee-ranking:last-child{
+  border-bottom: 0;
+}
+
+.trainee-ranking__info{
+  display: inline-block;
+  height: 85rpx;
+  margin: 33rpx 20rpx;
+  float: left;
+}
+
+.trainee-ranking__avatar{
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 33rpx 7rpx 33rpx 0;
+  float: left;
+}
+
+.trainee-ranking__name{
+  display: block;
+  height: 85rpx;
+  line-height: 85rpx;
+  color: #222;
+  font-size: 30rpx;
+}
+
+.trainee-ranking__time{
+  display: block;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #c7c7cc;
+  font-size: 26rpx;
+}
+
+.trainee-ranking__num{
+  color: #222;
+  font-size: 28rpx;
+  float: right;
+}
+
+.trainee-ranking__medal {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 33rpx;
+  left: -90rpx;
+}
+
+.card__title .txt{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.weui-cell__bd{
+  font-size: 28rpx;
+  color: #888;
+}

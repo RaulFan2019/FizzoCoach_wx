@@ -1,0 +1,66 @@
+/* myHrDevice.wxss */
+.banding{
+  text-align: center;
+  height: 120rpx;
+}
+.banding-device__icon{
+    display: block;
+    width: 34rpx;
+    height: 77rpx;
+    margin: 0 auto;
+}
+
+.banding-trainee__avatar{
+    display: block;
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    margin: 10rpx auto 0 auto;
+}
+
+.banding__time text{
+  display: inline-block;
+  width: 240rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  color: #c7c7cc;
+  font-size: 20rpx;
+  border-bottom: 1px solid #E5E5E5;
+  margin-top: 6rpx;
+}
+
+.banding-device__name,.banding-trainee__name {
+  color: #222;
+  font-size: 26rpx;
+}
+
+.nobanding-tip{
+  display: inline-block;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #222;
+  font-size: 26rpx;
+}
+
+.weui-icon-clear{
+  top: -9px;
+  right: -11px;
+  z-index:100;
+  width:96rpx;
+  height:96rpx;
+  line-height:96rpx;
+  text-align: center;
+  padding: 0;
+}
+
+.weui-icon-clear icon{
+  transform: rotateZ(45deg) translateY(6px);
+}
+
+.btn-oneclear{
+  width: auto;
+  height: 94rpx!important;
+  background-color: #FF4612 !important;
+  border: 2px solid rgba(5,5,5,0.08)!important;
+  border-radius: 10rpx!important;
+}

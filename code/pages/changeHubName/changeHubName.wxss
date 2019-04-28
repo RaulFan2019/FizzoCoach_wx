@@ -1,0 +1,18 @@
+/* changeHubName.wxss */
+.btn{
+  width: 670rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background-color: #FF4612!important;
+}
+
+.mt40{
+  margin-top: 40rpx;
+}
+
+.weui-input{
+  height: 111rpx;
+  line-height: 111rpx;
+  color: #000;
+  font-size: 34rpx;
+}

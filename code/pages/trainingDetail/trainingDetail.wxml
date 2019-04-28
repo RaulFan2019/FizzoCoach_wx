@@ -1,0 +1,106 @@
+<!--trainingDetail.wxml-->
+<view class="container">
+  <view class="card trainee">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image class="trainee__avatar" src="{{workout.avatar}}" background-size="cover"></image>
+        </view>
+        <view class="weui-cell__bd">{{workout.nickname}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="weui-panel">
+      <view class="weui-panel__hd">
+        <text class="tit">心率趋势</text>
+        <text class="sub-tit">平均心率：{{workout.avg_bpm}}</text>
+      </view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg" style="position: relative">
+            <view class="heart-rate__sider weui-flex effort">
+              <text class="weui-flex__item">强度</text>
+              <text class="weui-flex__item">100%</text>
+              <text class="weui-flex__item">80%</text>
+              <text class="weui-flex__item">60%</text>
+              <text class="weui-flex__item">40%</text>
+              <text class="weui-flex__item">20%</text>
+              <text class="weui-flex__item">0</text>
+            </view>
+            <canvas canvas-id="barChart" class="canvas" id="barChart"></canvas>
+            <view class="heart-rate__sider weui-flex heart">
+              <text class="weui-flex__item">心率</text>
+              <text class="weui-flex__item">{{workout.hr100}}</text>
+              <text class="weui-flex__item">{{workout.hr90}}</text>
+              <text class="weui-flex__item">{{workout.hr80}}</text>
+              <text class="weui-flex__item">{{workout.hr70}}</text>
+              <text class="weui-flex__item">{{workout.hr60}}</text>
+              <text class="weui-flex__item">{{workout.hr50}}</text>
+            </view>
+            <view class="base-line">
+              <text>锻炼开始</text>
+              <text>{{workout.minutes}}分钟</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="weui-panel">
+      <view class="weui-panel__hd">
+        <text class="tit">统计分析</text>
+        <text class="sub-tit">点数：{{workout.effort_point}}</text>
+      </view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg weui-flex">
+            <canvas canvas-id="ringChart" class="weui-flex__item" id="pieChart"></canvas>
+            <table class="tbl weui-flex__item">
+              <thead>
+                <tr>
+                  <th>区间</th>
+                  <th>心率</th>
+                  <th>点数</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><text class="c c1"></text>非锻炼区</td>
+                  <td>{{workout.hr_zones[0].hrrange}}</td>
+                  <td>{{workout.hr_zones[0].effort_point}}</td>
+                </tr>
+                <tr>
+                  <td><text class="c c2"></text>热身</td>
+                  <td>{{workout.hr_zones[1].hrrange}}</td>
+                  <td>{{workout.hr_zones[1].effort_point}}</td>
+                </tr>
+                <tr>
+                  <td><text class="c c3"></text>有氧减脂</td>
+                  <td>{{workout.hr_zones[2].hrrange}}</td>
+                  <td>{{workout.hr_zones[2].effort_point}}</td>
+                </tr>
+                <tr>
+                  <td><text class="c c4"></text>增强心肺</td>
+                  <td>{{workout.hr_zones[3].hrrange}}</td>
+                  <td>{{workout.hr_zones[3].effort_point}}</td>
+                </tr>
+                <tr>
+                  <td><text class="c c5"></text>提升耐力</td>
+                  <td>{{workout.hr_zones[4].hrrange}}</td>
+                  <td>{{workout.hr_zones[4].effort_point}}</td>
+                </tr>
+                <tr>
+                  <td><text class="c c6"></text>竞技训练</td>
+                  <td>{{workout.hr_zones[5].hrrange}}</td>
+                  <td>{{workout.hr_zones[5].effort_point}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

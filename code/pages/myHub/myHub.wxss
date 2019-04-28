@@ -1,0 +1,38 @@
+/* myHub.wxss */
+.hub{
+  display: inline-block;
+  height: 85rpx;
+  margin: 0 48rpx;
+  float: left;
+}
+
+.hub__name{
+  display: block;
+  width: 200rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #222;
+  font-size: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hub__mode{
+  display: block;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #999;
+  font-size: 26rpx;
+}
+
+.weui-cell__ft{
+  color: #999;
+  font-size: 26rpx;
+}
+
+.hub__icon{
+  display: inline-block;
+  width: 118rpx;
+  height: 123rpx;
+}

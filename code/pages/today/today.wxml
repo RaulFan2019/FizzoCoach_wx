@@ -1,0 +1,70 @@
+<!--today.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="club__info">
+      <image class="club-info__avatar" src="{{club.logo}}" background-size="cover"></image>
+      <text class="club-info__name">{{club.name}}</text>
+    </view>
+    <view class="fitness">
+      <view class="fitness__index">
+        <text class="fitness__num">{{ movercount }}</text>
+        <text class="fitness__uint">人数</text>
+      </view>
+      <view class="fitness__index">
+        <text class="fitness__num">{{ calorie }}</text>
+        <text class="fitness__uint">千卡</text>
+      </view>
+      <view class="fitness__index">
+        <text class="fitness__num">{{ points }}</text>
+        <text class="fitness__uint">点数</text>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card__title">
+      <image class="icon-ing" src="{{ icon.ingIcon }}" background-size="cover"></image>
+      <text class="txt">进行中（{{ trainee.ing.length }}）</text>
+    </view>
+    <view class="card__content">
+      <scroll-view class="trainee-ing" scroll-x="true" wx:if="{{ trainee.ing.length > 0}}">
+        <view class="trainee" wx:for="{{trainee.ing}}" wx:key="id">
+          <navigator url="../traineeDetail/traineeDetail?moverid={{item.moverid}}">
+            <image class="trainee-ing__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+          </navigator>
+          <text class="trainee-ing__name">{{item.nickname}}</text>
+        </view>
+      </scroll-view>
+      <view class="weui-loadmore weui-loadmore_line" wx:else>
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有正在锻炼的学员</view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card__title">
+      <image class="icon-ranking" src="{{ icon.rankingIcon }}" background-size="cover"></image>
+      <text class="txt">排行榜（点数）</text>
+    </view>
+    <view wx:if="{{ trainee.ranking.length > 0}}">
+      <view class="card__content" style="padding-right:0;">
+        <navigator class="trainee-ranking" wx:for="{{trainee.ranking}}" wx:key="id" url="../traineeDetail/traineeDetail?moverid={{item.id}}">
+            <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+            <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+            <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+            <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+            <view class="trainee-ranking__info">
+              <text class="trainee-ranking__name">{{item.nickname}}</text>
+            </view>
+            <text class="trainee-ranking__num">{{item.effort_point}}</text>
+          </navigator>
+      </view>
+      <view class="card__footer weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="checkDetail">
+                <view class="weui-cell__bd">查看详情</view>
+            </view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">今日无记录</view>
+    </view>
+  </view>
+</view>

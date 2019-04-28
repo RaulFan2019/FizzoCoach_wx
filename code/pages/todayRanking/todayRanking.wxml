@@ -1,0 +1,90 @@
+<!--todayRanking.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="page">
+        <view class="page__bd">
+            <view class="weui-tab">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+                <view class="weui-tab__panel">
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                      <view class="card__content" style="padding-right:0;">
+                        <navigator class="trainee-ranking" wx:for="{{ranking}}" wx:key="id" wx:if="{{index <= 10}}" url="../traineeDetail/traineeDetail?moverid={{item.id}}">
+                            <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+                            <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+                            <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+                            <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+                            <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+                            <view class="trainee-ranking__info">
+                              <text class="trainee-ranking__name">{{item.nickname}}</text>
+                            </view>
+                            <text class="trainee-ranking__num">{{item.calorie}}</text>
+                          </navigator>
+                      </view>
+                      <view class="card__footer">
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" id="calorie" wx:if="{{ more && ranking.length > size}}">
+                            <view class="weui-cell__bd">查看更多</view>
+                        </view>
+                      </view>
+                      <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+                          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+                      </view>
+                    </view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                      <view class="card__content" style="padding-right:0;">
+                        <navigator class="trainee-ranking" wx:for="{{ranking}}" wx:key="id" wx:if="{{index <= 10}}" url="../traineeDetail/traineeDetail?moverid={{item.id}}">
+                          <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+                          <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+                          <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+                          <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+                          <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+                          <view class="trainee-ranking__info">
+                            <text class="trainee-ranking__name">{{item.nickname}}</text>
+                          </view>
+                          <text class="trainee-ranking__num">{{item.effort_point}}</text>
+                        </navigator>
+                      </view>
+                      <view class="card__footer">
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" id="effort_point" wx:if="{{ more && ranking.length > size}}">
+                            <view class="weui-cell__bd">查看更多</view>
+                        </view>
+                      </view>
+                      <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+                          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+                      </view>
+                    </view>
+                    <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                      <view class="card__content" style="padding-right:0;">
+                        <navigator class="trainee-ranking" wx:for="{{ranking}}"  wx:key="id" wx:if="{{index <= 10}}" url="../traineeDetail/traineeDetail?moverid={{item.id}}">
+                            <image wx:if="{{index == 0}}" class="trainee-ranking__medal" src="{{icon.ranking1}}" background-size="cover"></image>
+                            <image wx:if="{{index == 1}}" class="trainee-ranking__medal" src="{{icon.ranking2}}" background-size="cover"></image>
+                            <image wx:if="{{index == 2}}" class="trainee-ranking__medal" src="{{icon.ranking3}}" background-size="cover"></image>
+                            <image class="trainee-ranking__avatar" src="{{item.avatar || icon.default}}" background-size="cover"></image>
+                            <text class="ranking" wx:if="{{index != 0 && index != 1 && index != 2}}">{{index+1}}</text>
+                            <view class="trainee-ranking__info">
+                              <text class="trainee-ranking__name">{{item.nickname}}</text>
+                            </view>
+                            <text class="trainee-ranking__num">{{item.minutes}}</text>
+                          </navigator>
+                      </view>
+                      <view class="card__footer">
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="loadMore" id="minutes" wx:if="{{ more && ranking.length > size}}">
+                            <view class="weui-cell__bd">查看更多</view>
+                        </view>
+                      </view>
+                      <view class="weui-loadmore weui-loadmore_line" wx:if="{{ !more }}">
+                          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多了</view>
+                      </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

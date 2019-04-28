@@ -1,0 +1,50 @@
+/* deviceSearching.wxss */
+.tip-bg{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.searching__icon{
+  display: block;
+  width: 290rpx;
+  height: 290rpx;
+  margin: 0 auto;
+}
+
+.tip-txt{
+  color: #222;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.tip-txt-1{
+  margin: 53rpx 0 51rpx 0;
+}
+
+.tip-txt-2{
+  margin: 74rpx 0 520rpx 0;
+}
+
+.banding{
+  display: inline-block;
+  text-align: center;
+  height: 120rpx;
+  padding: 0 24rpx;
+  border-right: 1rpx solid #E5E5E5;
+}
+.banding-device__icon{
+    display: block;
+    width: 34rpx;
+    height: 77rpx;
+    margin: 0 auto;
+}
+
+.banding-device__name,.weui-cell__ft {
+  color: #222;
+  font-size: 26rpx;
+}
+
+.highlight-red{
+  color: #FF4612;
+}

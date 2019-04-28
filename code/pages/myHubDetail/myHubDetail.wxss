@@ -1,0 +1,28 @@
+/* myHubDetail.wxss */
+.header{
+  background: linear-gradient(-180deg, #2B2A30 0%, #3F3E43 100%);
+}
+
+.header-img-bg{
+  width: 324rpx;
+  height: 324rpx;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -154rpx;
+}
+
+.icon-hub{
+  display: block;
+  width: 118rpx;
+  height: 123rpx;
+  margin: 88rpx auto 112rpx auto;
+}
+
+.binding{
+  font-size: 30rpx;
+}
+
+.binding .weui-cell__ft{
+  color: #888;
+}

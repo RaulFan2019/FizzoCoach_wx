@@ -1,0 +1,103 @@
+/* myHrDeviceDetail.wxss */
+.header{
+  background: linear-gradient(-180deg, #2B2A30 0%, #3F3E43 100%);
+}
+
+.header .btn-wrapper{
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 104rpx;
+  z-index: 3;
+}
+
+.icon-ring{
+  display: block;
+  width: 392rpx;
+  height: 174rpx;
+  margin: 0 auto;
+  margin-top: 42rpx;
+  margin-bottom: 81rpx;
+}
+
+.delete{
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.mini-btn{
+  width: 180rpx;
+  background-color: #FF4612!important;
+  border-radius: 32rpx;
+  font-size: 24rpx!important;
+  color: #FFF;
+}
+
+.weui-cells{
+  font-size: 30rpx;
+}
+
+.weui-cells .weui-cell__ft{
+  color: #888;
+}
+
+.banding-device__icon{
+    display: block;
+    width: 67rpx;
+    height: 150rpx;
+    margin: 62rpx auto 28rpx auto;
+}
+
+.binded{
+   display: block;
+   width: 100%;
+   height: 297rpx;
+}
+
+.binded-device{
+  display: inline-block;
+  width: 50%;
+  height: 297rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.binded-device text,.binded-trainee text{
+  display: block;
+  color: #FFF;
+  font-size: 24rpx;
+  text-align: center
+}
+
+.binded-trainee text{
+  text-indent: 50rpx;
+}
+.binded-trainee{
+  display: inline-block;
+  width: 50%;
+  height: 297rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.binded-trainee-avatar{
+    display: block;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin: 73rpx 92rpx 46rpx auto;
+}
+
+.dashed-line{
+  width:310rpx;
+  border-top: 3rpx dashed #999;
+  position: absolute;
+  top: 129rpx;
+  left:222rpx;
+  z-index: 2
+}
